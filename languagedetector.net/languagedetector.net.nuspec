@@ -1,0 +1,27 @@
+﻿<?xml version="1.0"?>
+<package >
+  <metadata>
+    <id>$id$</id>
+    <title>$id$</title>
+    <version>$version$</version>
+    <authors>tvn-cosine</authors>
+    <owners>tvn-cosine</owners>
+    <licenseUrl>https://www.apache.org/licenses/LICENSE-2.0</licenseUrl>
+    <projectUrl>https://github.com/tvn-cosine/languagedetector.net/wiki</projectUrl>
+    <requireLicenseAcceptance>true</requireLicenseAcceptance>
+    <description>a .net implementation of com.cybozu.labs.langdetect</description>
+    <summary>a .net implementation of com.cybozu.labs.langdetect</summary>
+    <releaseNotes>
+      Initial release
+    </releaseNotes>
+    <copyright>Copyright © tvn-cosine 2018</copyright>
+    <tags>language detection dotNet langdetect com.cybozu.labs.langdetect</tags>
+    <dependencies>
+      <dependency id="IKVM" version="8.1.5717.0" />
+    </dependencies>
+  </metadata>
+  <files>
+    <file src="lib\langdetect.dll" target="lib\" />
+    <file src="profiles\**\*.*" target="profiles\" />
+  </files>
+</package>

@@ -1,0 +1,245 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{55D2EA1E-7CBC-4CDA-8DBC-8AD0B46FB6DD}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>languagedetector.net</RootNamespace>
+    <AssemblyName>languagedetector.net</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="IKVM.AWT.WinForms, Version=8.1.5717.0, Culture=neutral, PublicKeyToken=13235d27fcbfff58, processorArchitecture=MSIL">
+      <HintPath>..\packages\IKVM.8.1.5717.0\lib\IKVM.AWT.WinForms.dll</HintPath>
+    </Reference>
+    <Reference Include="IKVM.OpenJDK.Beans, Version=8.1.5717.0, Culture=neutral, PublicKeyToken=13235d27fcbfff58, processorArchitecture=MSIL">
+      <HintPath>..\packages\IKVM.8.1.5717.0\lib\IKVM.OpenJDK.Beans.dll</HintPath>
+    </Reference>
+    <Reference Include="IKVM.OpenJDK.Charsets, Version=8.1.5717.0, Culture=neutral, PublicKeyToken=13235d27fcbfff58, processorArchitecture=MSIL">
+      <HintPath>..\packages\IKVM.8.1.5717.0\lib\IKVM.OpenJDK.Charsets.dll</HintPath>
+    </Reference>
+    <Reference Include="IKVM.OpenJDK.Cldrdata, Version=8.1.5717.0, Culture=neutral, PublicKeyToken=13235d27fcbfff58, processorArchitecture=MSIL">
+      <HintPath>..\packages\IKVM.8.1.5717.0\lib\IKVM.OpenJDK.Cldrdata.dll</HintPath>
+    </Reference>
+    <Reference Include="IKVM.OpenJDK.Corba, Version=8.1.5717.0, Culture=neutral, PublicKeyToken=13235d27fcbfff58, processorArchitecture=MSIL">
+      <HintPath>..\packages\IKVM.8.1.5717.0\lib\IKVM.OpenJDK.Corba.dll</HintPath>
+    </Reference>
+    <Reference Include="IKVM.OpenJDK.Core, Version=8.1.5717.0, Culture=neutral, PublicKeyToken=13235d27fcbfff58, processorArchitecture=MSIL">
+      <HintPath>..\packages\IKVM.8.1.5717.0\lib\IKVM.OpenJDK.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="IKVM.OpenJDK.Jdbc, Version=8.1.5717.0, Culture=neutral, PublicKeyToken=13235d27fcbfff58, processorArchitecture=MSIL">
+      <HintPath>..\packages\IKVM.8.1.5717.0\lib\IKVM.OpenJDK.Jdbc.dll</HintPath>
+    </Reference>
+    <Reference Include="IKVM.OpenJDK.Localedata, Version=8.1.5717.0, Culture=neutral, PublicKeyToken=13235d27fcbfff58, processorArchitecture=MSIL">
+      <HintPath>..\packages\IKVM.8.1.5717.0\lib\IKVM.OpenJDK.Localedata.dll</HintPath>
+    </Reference>
+    <Reference Include="IKVM.OpenJDK.Management, Version=8.1.5717.0, Culture=neutral, PublicKeyToken=13235d27fcbfff58, processorArchitecture=MSIL">
+      <HintPath>..\packages\IKVM.8.1.5717.0\lib\IKVM.OpenJDK.Management.dll</HintPath>
+    </Reference>
+    <Reference Include="IKVM.OpenJDK.Media, Version=8.1.5717.0, Culture=neutral, PublicKeyToken=13235d27fcbfff58, processorArchitecture=MSIL">
+      <HintPath>..\packages\IKVM.8.1.5717.0\lib\IKVM.OpenJDK.Media.dll</HintPath>
+    </Reference>
+    <Reference Include="IKVM.OpenJDK.Misc, Version=8.1.5717.0, Culture=neutral, PublicKeyToken=13235d27fcbfff58, processorArchitecture=MSIL">
+      <HintPath>..\packages\IKVM.8.1.5717.0\lib\IKVM.OpenJDK.Misc.dll</HintPath>
+    </Reference>
+    <Reference Include="IKVM.OpenJDK.Naming, Version=8.1.5717.0, Culture=neutral, PublicKeyToken=13235d27fcbfff58, processorArchitecture=MSIL">
+      <HintPath>..\packages\IKVM.8.1.5717.0\lib\IKVM.OpenJDK.Naming.dll</HintPath>
+    </Reference>
+    <Reference Include="IKVM.OpenJDK.Nashorn, Version=8.1.5717.0, Culture=neutral, PublicKeyToken=13235d27fcbfff58, processorArchitecture=MSIL">
+      <HintPath>..\packages\IKVM.8.1.5717.0\lib\IKVM.OpenJDK.Nashorn.dll</HintPath>
+    </Reference>
+    <Reference Include="IKVM.OpenJDK.Remoting, Version=8.1.5717.0, Culture=neutral, PublicKeyToken=13235d27fcbfff58, processorArchitecture=MSIL">
+      <HintPath>..\packages\IKVM.8.1.5717.0\lib\IKVM.OpenJDK.Remoting.dll</HintPath>
+    </Reference>
+    <Reference Include="IKVM.OpenJDK.Security, Version=8.1.5717.0, Culture=neutral, PublicKeyToken=13235d27fcbfff58, processorArchitecture=MSIL">
+      <HintPath>..\packages\IKVM.8.1.5717.0\lib\IKVM.OpenJDK.Security.dll</HintPath>
+    </Reference>
+    <Reference Include="IKVM.OpenJDK.SwingAWT, Version=8.1.5717.0, Culture=neutral, PublicKeyToken=13235d27fcbfff58, processorArchitecture=MSIL">
+      <HintPath>..\packages\IKVM.8.1.5717.0\lib\IKVM.OpenJDK.SwingAWT.dll</HintPath>
+    </Reference>
+    <Reference Include="IKVM.OpenJDK.Text, Version=8.1.5717.0, Culture=neutral, PublicKeyToken=13235d27fcbfff58, processorArchitecture=MSIL">
+      <HintPath>..\packages\IKVM.8.1.5717.0\lib\IKVM.OpenJDK.Text.dll</HintPath>
+    </Reference>
+    <Reference Include="IKVM.OpenJDK.Tools, Version=8.1.5717.0, Culture=neutral, PublicKeyToken=13235d27fcbfff58, processorArchitecture=MSIL">
+      <HintPath>..\packages\IKVM.8.1.5717.0\lib\IKVM.OpenJDK.Tools.dll</HintPath>
+    </Reference>
+    <Reference Include="IKVM.OpenJDK.Util, Version=8.1.5717.0, Culture=neutral, PublicKeyToken=13235d27fcbfff58, processorArchitecture=MSIL">
+      <HintPath>..\packages\IKVM.8.1.5717.0\lib\IKVM.OpenJDK.Util.dll</HintPath>
+    </Reference>
+    <Reference Include="IKVM.OpenJDK.XML.API, Version=8.1.5717.0, Culture=neutral, PublicKeyToken=13235d27fcbfff58, processorArchitecture=MSIL">
+      <HintPath>..\packages\IKVM.8.1.5717.0\lib\IKVM.OpenJDK.XML.API.dll</HintPath>
+    </Reference>
+    <Reference Include="IKVM.OpenJDK.XML.Bind, Version=8.1.5717.0, Culture=neutral, PublicKeyToken=13235d27fcbfff58, processorArchitecture=MSIL">
+      <HintPath>..\packages\IKVM.8.1.5717.0\lib\IKVM.OpenJDK.XML.Bind.dll</HintPath>
+    </Reference>
+    <Reference Include="IKVM.OpenJDK.XML.Crypto, Version=8.1.5717.0, Culture=neutral, PublicKeyToken=13235d27fcbfff58, processorArchitecture=MSIL">
+      <HintPath>..\packages\IKVM.8.1.5717.0\lib\IKVM.OpenJDK.XML.Crypto.dll</HintPath>
+    </Reference>
+    <Reference Include="IKVM.OpenJDK.XML.Parse, Version=8.1.5717.0, Culture=neutral, PublicKeyToken=13235d27fcbfff58, processorArchitecture=MSIL">
+      <HintPath>..\packages\IKVM.8.1.5717.0\lib\IKVM.OpenJDK.XML.Parse.dll</HintPath>
+    </Reference>
+    <Reference Include="IKVM.OpenJDK.XML.Transform, Version=8.1.5717.0, Culture=neutral, PublicKeyToken=13235d27fcbfff58, processorArchitecture=MSIL">
+      <HintPath>..\packages\IKVM.8.1.5717.0\lib\IKVM.OpenJDK.XML.Transform.dll</HintPath>
+    </Reference>
+    <Reference Include="IKVM.OpenJDK.XML.WebServices, Version=8.1.5717.0, Culture=neutral, PublicKeyToken=13235d27fcbfff58, processorArchitecture=MSIL">
+      <HintPath>..\packages\IKVM.8.1.5717.0\lib\IKVM.OpenJDK.XML.WebServices.dll</HintPath>
+    </Reference>
+    <Reference Include="IKVM.OpenJDK.XML.XPath, Version=8.1.5717.0, Culture=neutral, PublicKeyToken=13235d27fcbfff58, processorArchitecture=MSIL">
+      <HintPath>..\packages\IKVM.8.1.5717.0\lib\IKVM.OpenJDK.XML.XPath.dll</HintPath>
+    </Reference>
+    <Reference Include="IKVM.Runtime, Version=8.1.5717.0, Culture=neutral, PublicKeyToken=13235d27fcbfff58, processorArchitecture=MSIL">
+      <HintPath>..\packages\IKVM.8.1.5717.0\lib\IKVM.Runtime.dll</HintPath>
+    </Reference>
+    <Reference Include="IKVM.Runtime.JNI, Version=8.1.5717.0, Culture=neutral, PublicKeyToken=13235d27fcbfff58, processorArchitecture=MSIL">
+      <HintPath>..\packages\IKVM.8.1.5717.0\lib\IKVM.Runtime.JNI.dll</HintPath>
+    </Reference>
+    <Reference Include="langdetect, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>lib\langdetect.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ILanguageDetector.cs" />
+    <Compile Include="ILanguageResult.cs" />
+    <Compile Include="LanguageDetector.cs" />
+    <Compile Include="LanguageResult.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="languagedetector.net.nuspec" />
+    <None Include="packages.config" />
+    <None Include="profiles\profiles.sm\ar" />
+    <None Include="profiles\profiles.sm\bg" />
+    <None Include="profiles\profiles.sm\bn" />
+    <None Include="profiles\profiles.sm\ca" />
+    <None Include="profiles\profiles.sm\cs" />
+    <None Include="profiles\profiles.sm\da" />
+    <None Include="profiles\profiles.sm\de" />
+    <None Include="profiles\profiles.sm\el" />
+    <None Include="profiles\profiles.sm\en" />
+    <None Include="profiles\profiles.sm\es" />
+    <None Include="profiles\profiles.sm\et" />
+    <None Include="profiles\profiles.sm\fa" />
+    <None Include="profiles\profiles.sm\fi" />
+    <None Include="profiles\profiles.sm\fr" />
+    <None Include="profiles\profiles.sm\gu" />
+    <None Include="profiles\profiles.sm\he" />
+    <None Include="profiles\profiles.sm\hi" />
+    <None Include="profiles\profiles.sm\hr" />
+    <None Include="profiles\profiles.sm\hu" />
+    <None Include="profiles\profiles.sm\id" />
+    <None Include="profiles\profiles.sm\it" />
+    <None Include="profiles\profiles.sm\ja" />
+    <None Include="profiles\profiles.sm\ko" />
+    <None Include="profiles\profiles.sm\lt" />
+    <None Include="profiles\profiles.sm\lv" />
+    <None Include="profiles\profiles.sm\mk" />
+    <None Include="profiles\profiles.sm\ml" />
+    <None Include="profiles\profiles.sm\nl" />
+    <None Include="profiles\profiles.sm\no" />
+    <None Include="profiles\profiles.sm\pa" />
+    <None Include="profiles\profiles.sm\pl" />
+    <None Include="profiles\profiles.sm\pt" />
+    <None Include="profiles\profiles.sm\ro" />
+    <None Include="profiles\profiles.sm\ru" />
+    <None Include="profiles\profiles.sm\si" />
+    <None Include="profiles\profiles.sm\sq" />
+    <None Include="profiles\profiles.sm\sv" />
+    <None Include="profiles\profiles.sm\ta" />
+    <None Include="profiles\profiles.sm\te" />
+    <None Include="profiles\profiles.sm\th" />
+    <None Include="profiles\profiles.sm\tl" />
+    <None Include="profiles\profiles.sm\tr" />
+    <None Include="profiles\profiles.sm\uk" />
+    <None Include="profiles\profiles.sm\ur" />
+    <None Include="profiles\profiles.sm\vi" />
+    <None Include="profiles\profiles.sm\zh-cn" />
+    <None Include="profiles\profiles.sm\zh-tw" />
+    <None Include="profiles\profiles\af" />
+    <None Include="profiles\profiles\ar" />
+    <None Include="profiles\profiles\bg" />
+    <None Include="profiles\profiles\bn" />
+    <None Include="profiles\profiles\cs" />
+    <None Include="profiles\profiles\da" />
+    <None Include="profiles\profiles\de" />
+    <None Include="profiles\profiles\el" />
+    <None Include="profiles\profiles\en" />
+    <None Include="profiles\profiles\es" />
+    <None Include="profiles\profiles\et" />
+    <None Include="profiles\profiles\fa" />
+    <None Include="profiles\profiles\fi" />
+    <None Include="profiles\profiles\fr" />
+    <None Include="profiles\profiles\gu" />
+    <None Include="profiles\profiles\he" />
+    <None Include="profiles\profiles\hi" />
+    <None Include="profiles\profiles\hr" />
+    <None Include="profiles\profiles\hu" />
+    <None Include="profiles\profiles\id" />
+    <None Include="profiles\profiles\it" />
+    <None Include="profiles\profiles\ja" />
+    <None Include="profiles\profiles\kn" />
+    <None Include="profiles\profiles\ko" />
+    <None Include="profiles\profiles\lt" />
+    <None Include="profiles\profiles\lv" />
+    <None Include="profiles\profiles\mk" />
+    <None Include="profiles\profiles\ml" />
+    <None Include="profiles\profiles\mr" />
+    <None Include="profiles\profiles\ne" />
+    <None Include="profiles\profiles\nl" />
+    <None Include="profiles\profiles\no" />
+    <None Include="profiles\profiles\pa" />
+    <None Include="profiles\profiles\pl" />
+    <None Include="profiles\profiles\pt" />
+    <None Include="profiles\profiles\ro" />
+    <None Include="profiles\profiles\ru" />
+    <None Include="profiles\profiles\sk" />
+    <None Include="profiles\profiles\sl" />
+    <None Include="profiles\profiles\so" />
+    <None Include="profiles\profiles\sq" />
+    <None Include="profiles\profiles\sv" />
+    <None Include="profiles\profiles\sw" />
+    <None Include="profiles\profiles\ta" />
+    <None Include="profiles\profiles\te" />
+    <None Include="profiles\profiles\th" />
+    <None Include="profiles\profiles\tl" />
+    <None Include="profiles\profiles\tr" />
+    <None Include="profiles\profiles\uk" />
+    <None Include="profiles\profiles\ur" />
+    <None Include="profiles\profiles\vi" />
+    <None Include="profiles\profiles\zh-cn" />
+    <None Include="profiles\profiles\zh-tw" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="lib\langdetect.dll" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
