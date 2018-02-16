@@ -243,7 +243,7 @@
     <None Include="profiles\profiles\zh-tw" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="lib\langdetect.dll" />
+    <None Include="lib\langdetect.dll" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
